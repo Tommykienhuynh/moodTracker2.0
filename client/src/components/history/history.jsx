@@ -26,7 +26,7 @@ export default function History() {
         <div className="historyPage">
              <Toolbar className="toolBar" />
 
-      <img src={HistorySVG} className="historySVG" />
+      {/* <img src={HistorySVG} className="historySVG" /> */}
 
              <div className="logsContainer">
                  <h1> Mood Logs </h1>

@@ -7,7 +7,7 @@
   grid-template-columns: 6% 80%;
   grid-template-rows: 10% 1fr;
   grid-column-gap: 8vw;
-  grid-row-gap: 15vh;
+  grid-row-gap: 5vh;
 }
 
 .toolBar {
@@ -31,15 +31,40 @@
 .historySVG {
   grid-template-rows: 1/2;
   grid-template-columns: 2/3;
-  height: 170px;
+  height: 140px;
   margin: auto;
 }
 
 .logContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  height: 130px;
+  margin-bottom: 50px;
+  border-radius: 16px;
+}
+.logContainer.Great {
+  background-color: $Light-Green;
+}
+.logContainer.Good {
+  background-color: $Light-Blue;
+}
+.logContainer.Okay {
+  background-color: $Light-Orange;
+}
+.logContainer.Sad {
+  background-color: $Light-Red;
+}
+.logContainer.Depressed {
+  background-color: $Light-Purple;
+}
+
+.logDate {
+  margin-right: 50px;
+  margin-top: 20px;
+  align-self: flex-start;
+  font-weight: bold;
 }
 
 .logFaceContainer {
@@ -47,10 +72,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: 1px black solid;
+  width: 13%;
+  height: 80%;
+  border-radius: 16px;
+  justify-self: flex-start;
+  margin-left: 40px;
 
   .logImg {
-    height: 10px;
-    width: 10px;
+    height: 75%;
+    width: 75%;
   }
 }
 .logFaceContainer.Great {
