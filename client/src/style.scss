@@ -1,0 +1,55 @@
+///***** Colors ******///
+
+$Main-Green: #baf290;
+$Main-Blue: #bff2ea;
+$Main-Orange: #ffd089;
+$Main-Red: #ee968d;
+$Main-Purple: #d3c0f3;
+
+$Light-Green: #c8ecad;
+$Light-Blue: #d8ebe8;
+$Light-Orange: #fee4bd;
+$Light-Red: #ffc3bd;
+$Light-Purple: #dbd0ec;
+
+$Dark-Green: #68d813;
+$Dark-Blue: #52adc8;
+$Dark-Orange: #eba336;
+$Dark-Red: #f1503e;
+$Dark-Purple: #b99be5;
+
+$Main-Grey: #c4c4c4;
+
+///*****Typography*******///
+
+///*****Buttons******///
+
+button {
+  border-radius: 16px;
+  border: 1px solid black;
+}
+
+body {
+  background: #ebe8d8;
+}
+
+:export {
+  mainGreen: $Main-Green;
+  Main-Blue: $Main-Blue;
+  Main-Orange: $Main-Orange;
+  Main-Red: $Main-Red;
+  Main-Purple: $Main-Purple;
+}
+
+.shadow {
+  webkit-box-shadow: 0 8px 6px -9px black;
+  -moz-box-shadow: 0 8px 6px -9px black;
+  box-shadow: 0 8px 6px -9px black;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

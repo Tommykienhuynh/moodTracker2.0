@@ -1,0 +1,254 @@
+@import "../../style.scss";
+
+//************* Dashboard Page **************//
+
+.dashBoard {
+  padding: 30px;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 6% 48% 25%;
+  grid-template-rows: 32% 45%;
+  grid-column-gap: 8vw;
+  grid-row-gap: 15vh;
+
+  height: 100vh;
+}
+
+//*************** ToolBar *************//
+.toolBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 90vh;
+  width: 100%;
+
+  background-color: $Main-Grey;
+  border: 2px black solid;
+  border-radius: 30px;
+
+  grid-row: 1/3;
+  grid-column: 1/2;
+
+  .logoContainer {
+    border-bottom: 2px solid black;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topLogoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fa {
+    width: 35%;
+    height: 35%;
+  }
+  .fai {
+    width: 35%;
+    height: 35%;
+  }
+  .fai:hover {
+    color: white;
+  }
+  .fai.active {
+    color: $Main-Orange;
+  }
+  .faSignOut {
+    justify-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+.dashMoodLog {
+  grid-row: 1/2;
+  grid-column: 2/3;
+
+  width: 100%;
+}
+
+// Mood Graph
+
+.moodGraph {
+  background-color: #ebe8d8;
+  height: 100%;
+  width: 100%;
+
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.profileContainer {
+  grid-row: 1/2;
+  grid-column: 3/4;
+
+  margin-top: 20px;
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-row: 40% 50%;
+  background-color: $Main-Grey;
+  border: 1px solid black;
+  border-radius: 16px;
+  text-align: center;
+
+  .profilePic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    transform: translateY(-50px);
+    background-color: white;
+    justify-self: center;
+    position: absolute;
+  }
+  .profileName {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 50px;
+    align-self: center;
+  }
+  // I think it looks like shit
+  .profileStatContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    grid-row: 3/4;
+  }
+
+  .profileMoodTrack {
+    margin-top: 10px;
+    width: 80%;
+    height: 25%;
+  }
+
+  .logCounter {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+.moodBarsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 120px;
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+  .moodBar {
+    width: 100%;
+    background-color: $Main-Grey;
+    border-radius: 16px;
+    height: 70px;
+    margin-top: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //overflow: hidden;
+
+    small {
+      position: absolute;
+      transform: translate(230px, -5px);
+      color: black;
+      font-size: 22px;
+      float: right;
+      font-weight: bold;
+    }
+
+    .innerMoodBar {
+      height: 70px;
+      width: 30%;
+
+      background-color: #5225bd;
+      border-radius: 10px;
+      /*   animation: g 2500ms infinite ease-in-out; */
+      z-index: 2;
+      border-radius: 16px;
+    }
+    .innerMoodBar.great {
+      background-color: $Main-Green;
+    }
+    .innerMoodBar.good {
+      background-color: $Main-Blue;
+    }
+    .innerMoodBar.okay {
+      background-color: $Main-Orange;
+    }
+    .innerMoodBar.sad {
+      background-color: $Main-Red;
+    }
+    .innerMoodBar.depressed {
+      background-color: $Main-Purple;
+    }
+
+    /*  .innerMoodBar-liquid {
+      z-index: 1;
+      width: 80px;
+      height: 80px;
+      animation: r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+      position: absolute;
+
+      background-color: #5225bd;
+      border-radius: 40%;
+    } */
+
+    .barFaceContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+
+      width: 4%;
+      margin-left: 10px;
+      height: 50px;
+      border-radius: 16px;
+      border: 1px solid black;
+      z-index: 4;
+      img {
+        width: 70%;
+        height: 70%;
+      }
+    }
+    .barFaceContainer.great {
+      background-color: $Light-Green;
+    }
+    .barFaceContainer.good {
+      background-color: $Light-Blue;
+    }
+    .barFaceContainer.okay {
+      background-color: $Light-Orange;
+    }
+    .barFaceContainer.sad {
+      background-color: $Light-Red;
+    }
+    .barFaceContainer.depressed {
+      background-color: $Light-Purple;
+    }
+  }
+}
+
+@keyframes r {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
