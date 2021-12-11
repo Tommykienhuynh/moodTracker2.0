@@ -1,4 +1,5 @@
 import React from 'react'
+import "../landing.scss"
 
 export default function Card({color, title, desc, picture}) {
     return (

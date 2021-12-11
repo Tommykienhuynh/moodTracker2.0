@@ -13,13 +13,16 @@
   margin-right: 10vw;
   padding: 10px 40px;
   background-color: white;
+  cursor: not-allowed;
   margin-top: 30px;
+  opacity: 50%;
 }
 
 .signInBTN:hover {
   background-color: $Main-Grey;
+  opacity: 30%;
   color: white;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .headerContainer {
@@ -109,12 +112,12 @@
 }
 
 .cardCarousel {
-  display: flex;
+  /* display: flex; */
   margin-top: 100px;
-  position: relative;
-  width: 3000px;
+  /*   position: relative; */
+
   height: 600px;
-  box-sizing: content-box;
+  /*   box-sizing: content-box; */
   cursor: pointer;
 
   .card {
@@ -125,7 +128,7 @@
     align-items: flex-end;
     width: 250px;
     height: 500px;
-    margin-left: 65px;
+    margin-left: 25px;
   }
 
   .cardImgContainer {
@@ -150,10 +153,12 @@
     border-top: 1px solid black;
     height: 45%;
     width: 100%;
+    padding: 20px, 0;
 
     background-color: $Main-Grey;
     p {
-      font-size: 12px;
+      text-align: center;
+      font-size: 13px;
     }
   }
 }

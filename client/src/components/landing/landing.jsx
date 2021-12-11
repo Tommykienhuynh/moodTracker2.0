@@ -44,7 +44,8 @@ export default function Landing() {
 
                 <div className="aboutInfo">
                 <h1> How does This Work </h1>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  </p>
+                    <p> Moodtracker allows you to keep track of your daily moods. We also provide data visualizations to help you 
+                    analyze your behavior.  </p>
                 </div>
 
                 <Carousel />

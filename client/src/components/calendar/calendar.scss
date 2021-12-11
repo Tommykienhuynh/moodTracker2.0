@@ -1,0 +1,18 @@
+@import "../../style.scss";
+
+.calendarPage {
+  padding: 30px;
+  padding-top: 40px;
+  display: grid;
+  column-gap: 10%;
+  grid-template-columns: 6% 80%;
+}
+
+.calendar {
+  grid-column: 2/3;
+  margin-left: 100px;
+}
+
+.toolBar {
+  grid-column: 1/2;
+}
